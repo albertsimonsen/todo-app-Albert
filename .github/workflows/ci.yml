@@ -45,8 +45,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/albertsimonsen/todo-app-Albert:latest
-            ghcr.io/albertsimonsen/todo-app-Albert:${{ github.sha }}
+            ghcr.io/albertsimonsen/todo-app-albert:latest
+            ghcr.io/albertsimonsen/todo-app-albert:${{ github.sha }}
 
   build-and-push-frontend:
     needs: build-and-test
@@ -71,8 +71,8 @@ jobs:
           context: ./frontend
           push: true
           tags: |
-            ghcr.io/albertsimonsen/todo-app-Albert-frontend:latest
-            ghcr.io/albertsimonsen/todo-app-Albert-frontend:${{ github.sha }}
+            ghcr.io/albertsimonsen/todo-app-albert-frontend:latest
+            ghcr.io/albertsimonsen/todo-app-albert-frontend:${{ github.sha }}
 
   deploy:
     needs: [build-and-push-image, build-and-push-frontend]
